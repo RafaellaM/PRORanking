@@ -1,15 +1,14 @@
 <?php
     $db = array();
-    
     function Conectar($nome,$conexao) {
     	$db = array(
         		'proranking' => array(
-        								'host' 		=> '127.0.0.1',
-        								'nome' 		=> 'proranking',
-        								'usuario' 	=> 'root',
-        								'senha' 	=> 'password'
-        							)
-    		  );
+        				'host' 		=> '127.0.0.1',
+        				'nome' 		=> 'proranking',
+        				'usuario' 	=> 'root',
+        				'senha' 	=> 'password'
+        		)
+        );
         if(isset($conexao[$nome])){
             return $conexao[$nome];  
         }
