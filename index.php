@@ -1,5 +1,5 @@
 <?php
-	include("inc/rank_pages.php");
+	include("inc/rank_types.php");
 	include("inc/database.php");
 	include("inc/rank_data.php");
 ?>
