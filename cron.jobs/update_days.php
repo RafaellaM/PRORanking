@@ -109,11 +109,13 @@
         				$r3 = $stmt3->fetchColumn();
         				if(strpos($r3, $rdate) === false){
 							$rdata = "!".$rdate."|".$rhour."-".$Rank_2[0]."";
+							$fdata = "".$r3."".$rdata."";
         				}
         				else{
 							$rdata = "#".$rhour."-".$Rank_2[0]."";
+							$fdata = "".$r3."".$rdata."";
         				}
-        				$stmt4 = $database->prepare("INSERT INTO `track_new` (`nickname`,`rdata`,`rtype`) values('$Rank_2[1]','$rdata','0')");
+        				$stmt4 = $database->prepare("UPDATE `track_new` SET `rdata` = '$fdata' WHERE `nickname` = '$Rank_2[1]' AND `rtype` = 0");
         				$stmt4->execute();
         			}
 					$i++;
@@ -146,11 +148,13 @@
         				$r3 = $stmt3->fetchColumn();
         				if(strpos($r3, $rdate) === false){
 							$rdata = "!".$rdate."|".$rhour."-".$Rank_2[0]."";
+							$fdata = "".$r3."".$rdata."";
         				}
         				else{
 							$rdata = "#".$rhour."-".$Rank_2[0]."";
+							$fdata = "".$r3."".$rdata."";
         				}
-        				$stmt4 = $database->prepare("INSERT INTO `track_new` (`nickname`,`rdata`,`rtype`) values('$Rank_2[1]','$rdata','1')");
+        				$stmt4 = $database->prepare("UPDATE `track_new` SET `rdata` = '$fdata' WHERE `nickname` = '$Rank_2[1]' AND `rtype` = 1");
         				$stmt4->execute();
         			}
 					$j++;
@@ -182,11 +186,13 @@
         				$r3 = $stmt3->fetchColumn();
         				if(strpos($r3, $rdate) === false){
 							$rdata = "!".$rdate."|".$rhour."-".$Rank_2[0]."";
+							$fdata = "".$r3."".$rdata."";
         				}
         				else{
 							$rdata = "#".$rhour."-".$Rank_2[0]."";
+							$fdata = "".$r3."".$rdata."";
         				}
-        				$stmt4 = $database->prepare("INSERT INTO `track_new` (`nickname`,`rdata`,`rtype`) values('$Rank_2[1]','$rdata','2')");
+        				$stmt4 = $database->prepare("UPDATE `track_new` SET `rdata` = '$fdata' WHERE `nickname` = '$Rank_2[1]' AND `rtype` = 2");
         				$stmt4->execute();
         			}
 					$k++;
