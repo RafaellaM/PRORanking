@@ -2,6 +2,7 @@
 	//---------------------------------------------------
 	//SET THIS CRONJOB TO RUN EVERY HOUR IN YOUR SERVER
 	//---------------------------------------------------
+    date_default_timezone_set('UTC');
     $db = array();
     
     function Conectar($nome,$conexao) {
