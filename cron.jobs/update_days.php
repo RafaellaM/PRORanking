@@ -8,9 +8,9 @@
     	$db = array(
         		'proranking' => array(
         								'host' 		=> '127.0.0.1',
-        								'nome' 		=> 'rafaela_pro',
-        								'usuario' 	=> 'rafaela_pro',
-        								'senha' 	=> 'WT$%w2e3r5)uu'
+        								'nome' 		=> 'root',
+        								'usuario' 	=> 'proranking',
+        								'senha' 	=> 'password'
         							)
     		  );
         if(isset($conexao[$nome])){
