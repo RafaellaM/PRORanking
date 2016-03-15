@@ -11,7 +11,7 @@
     			$header = '<tr class="rank_white">';
     		}
     		else{
-    			$header = '<tr class="rank_red">';
+    			$header = '<tr class="rank_grey">';
     		}
     		echo '
 				'.$header.'
@@ -39,9 +39,17 @@
 				case 0:
 				case 1:
 					$Rank_2 = explode("-",$rankdata->data);
-					$data_format = "Ratting: $Rank_2[0] - W: $Rank_2[1] - L: $Rank_2[2]";
+					$data_format = "Ratting: ".$Rank_2[0]." - W: ".$Rank_2[1]." - L: ".$Rank_2[2]."";
 					break;
 				case 2:
+					$data_format = "$rankdata->data Hours";
+					break;
+				case 3:
+				case 4:
+					$Rank_2 = explode("-",$rankdata->data);
+					$data_format = "Ratting: ".$Rank_2[0]." - W: ".$Rank_2[1]." - L: ".$Rank_2[2]."";
+					break;
+				case 5:
 					$data_format = "$rankdata->data Hours";
 					break;
 			}
