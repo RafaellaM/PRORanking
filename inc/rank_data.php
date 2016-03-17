@@ -32,7 +32,7 @@
 				echo '';
 			}
 			echo '</td>
-					<td width="40%">'.$rankdata->nickname.'</td>
+					<td width="40%"><a class="ranktrack" href="/track.php?u='.$rankdata->nickname.'&c='.$cat.'">'.$rankdata->nickname.'</a></td>
 					<td width="50%">
 			';
 			switch($cat){

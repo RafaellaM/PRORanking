@@ -7,6 +7,19 @@
 	<head>
 		<title>PRO-Ranking</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/data.css?v=2.1.5">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/data.js?v=2.1.5"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+   				$(".ranktrack").fancybox({
+          	 		"padding" : 0, 
+           			"type":"iframe",  
+           			"width" : 820, 
+           			"height" : 200, 
+           		});
+			});
+		</script>
 	</head>
 	<body>
 		<div id="<?php if($divi == 0){echo "top_bg";}else{echo "top_bg2";}?>">
@@ -34,6 +47,11 @@
 				<th width="50%">Data</th>
 			</tr>
 			<?php do_getrank($bd,$ranktype); ?>
-		</table><br>
+		</table><br><br>
+		<div class="<?php if($divi == 0){echo "font2";}else{echo "font22";}?>">
+			Pro-Ranking on <a href="https://github.com/XTWebdesign/PRORanking" target="__blank">GitHub</a><br>
+			Hosted by:<br>
+			<a href="http://hostdix.com.br" target="__blank"><img src="hosp.gif" alt="" style="border:0px"/></a>
+		</div><br>
 	</body>
 </html>

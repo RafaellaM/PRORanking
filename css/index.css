@@ -7,7 +7,9 @@ body {width:600px;height:674px;margin:auto;padding:auto}
 .rank_column {font-family:verdana;font-size:9pt;background-color:#9a3122;color:white;min-height:30px;line-height:30px;text-align:center}
 .rank_column2 {font-family:verdana;font-size:9pt;background-color:#224f9a;color:white;min-height:30px;line-height:30px;text-align:center}
 .rank_white {font-family:verdana;font-size:9pt;background-color:white;color:#303030;height:12px;line-height:12px;text-align:center}
-.rank_grey {font-family:verdana;font-size:9pt;background-color:#636363;color:#ffffff;height:12px;line-height:12px;text-align:center}
+.rank_white a{color:#303030;text-decoration: none}
+.rank_grey {font-family:verdana;font-size:9pt;background-color:#9e9d9d;color:#ffffff;height:12px;line-height:12px;text-align:center}
+.rank_grey a{color:#ffffff;text-decoration: none}
 .button_pressed {font-family:verdana;font-size:9pt;color:white;width:80px;height:80px;border-radius:80px;background-color:#9a3122;color:white;border:0px}
 .button_normal {font-family:verdana;font-size:9pt;color:white;width:80px;height:80px;border-radius:80px;background-color:#d4452f;color:white;border:0px}
 .button_pressed_2 {font-family:verdana;font-size:9pt;color:white;width:80px;height:80px;border-radius:80px;background-color:#225a9a;color:white;border:0px}
