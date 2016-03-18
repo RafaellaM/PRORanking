@@ -28,15 +28,15 @@
 						}
 						else{
 							$rank_raw = do_getdata($bd, $_GET['u'], $_GET['c']);
-							echo $rank_raw;
 							if($rank_raw == -1){
 								die("");
 							}
 							else{
 								$rank_pt1 = explode("!", $rank_raw);
-								$rank_dte = date('j/n/y');
+								date_default_timezone_set('UTC');
+								$rank_dte = date("j/n/y");
 								$rank_pos = array_search($rank_dte, $rank_pt1);
-								$rank_pt2 = explode("|", $rank_pt1[$rank_pos]);
+								$rank_pt2 = explode("|", $rank_pt1[$rank_pos+1]);
 								$rank_pt3 = explode("#", $rank_pt2[1]);
 								foreach($rank_pt3 as $rank_hdt){
 									$rank_pt4 = explode("-", $rank_hdt);
@@ -71,16 +71,18 @@
 	<body>
 		<?php
 			if($_GET['c'] > 2){
+				date_default_timezone_set('UTC');
 				echo '
 					<span class="font12">'.$_GET['u'].' Rank data</span><br>
-					<span class="font22">'.date("F, d").'</span><br><br>
+					<span class="font22">'.date("F, d").' - PRO Servertime</span><br><br>
 					<div id="rankholder"></div>
 				';
 			}
 			else{
+				date_default_timezone_set('UTC');
 				echo '
 					<span class="font1">'.$_GET['u'].' Rank data</span><br>
-					<span class="font2">'.date("F, d").'</span><br><br>
+					<span class="font2">'.date("F, d").' - PRO Servertime</span><br><br>
 					<div id="rankholder"></div>
 				';
 			}
