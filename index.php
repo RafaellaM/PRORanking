@@ -3,7 +3,8 @@
 	include("inc/database.php");
 	include("inc/rank_data.php");
 ?>
-<!html>
+<!DOCTYPE html>
+<html>
 	<head>
 		<title>PRO-Ranking</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
