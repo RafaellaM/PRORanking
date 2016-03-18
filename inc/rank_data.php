@@ -4,7 +4,7 @@
     	$stmt->execute();
     	$rank = $stmt->fetchAll(PDO::FETCH_OBJ);
     	foreach($rank as $rankdata){
-    		$stmt2 = $database->prepare("SELECT `rank` FROM `rank_old` WHERE `nickname` = '$rankdata->nickname'");
+    		$stmt2 = $database->prepare("SELECT `rank` FROM `rank_old` WHERE `nickname` = '$rankdata->nickname' AND `cat` = '$cat'");
     		$stmt2->execute();
     		$rankdata2 = $stmt2->fetch(PDO::FETCH_OBJ);
     		if($rankdata->rank % 2 < 1){
