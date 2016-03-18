@@ -1,7 +1,8 @@
 <?php
 	include("inc/database.php");
 ?>
-<!html>
+<!DOCTYPE html>
+<html>
 	<head>
 		<title>PRO Rank Tracker</title>
 		<link rel="stylesheet" type="text/css" href="css/track.css">
