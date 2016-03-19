@@ -13,6 +13,12 @@
 			$(function() {
 				var rank = [
 					<?php
+						function array_s($arr, $keyword) {
+							foreach($arr as $index => $string) {
+							        if (strpos($string, $keyword) !== FALSE)
+							            return $index;
+								}
+						}
 						function do_getdata($database, $nickname, $cat) {
     						$stmt = $database->prepare("SELECT `rdata` FROM `track_new` WHERE `rtype` = '$cat' AND `nickname` = '$nickname'");
     						$stmt->execute();
@@ -36,14 +42,9 @@
 								$rank_pt1 = explode("!", $rank_raw);
 								date_default_timezone_set('UTC');
 								$rank_dte = date("j/n/y");
-								$rank_pos = array_search($rank_dte, $rank_pt1);
-								if(!$rank_pt1[$rank_pos+1]){
-									$rsearch = $rank_pt1[$rank_pos];
-								}
-								else{
-									$rsearch = $rank_pt1[$rank_pos+1];
-								}
-								$rank_pt2 = explode("|", $rsearch);
+								$rank_dte = date("j/n/y");
+								$rank_pos = array_s($rank_pt1, $rank_dte);
+								$rank_pt2 = explode("|", $rank_pt1[$rank_pos]);
 								$rank_pt3 = explode("#", $rank_pt2[1]);
 								foreach($rank_pt3 as $rank_hdt){
 									$rank_pt4 = explode("-", $rank_hdt);
