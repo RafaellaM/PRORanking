@@ -85,7 +85,9 @@
 		$Format_text_14 = str_replace('</td></tr> </table> </td> </tr> </table> <table cellpadding="10" cellspacing="0" class="auto-style2"> <tr> <td class="auto-style12"> Top BLUE 25 Total Game Time </td> </tr> <tr> <td class="auto-style17"> <table style="width: 95%" class="auto-style2" cellpadding="10" cellspacing="0"> <tr> <td class="auto-style12" style="width: 30px;height: 33px;">Rank</td> <td class="auto-style12" style="width: 400px; height: 33px;">Username</td> <td class="auto-style12" style="width: 100px;height: 33px">Game Time</td> </tr> <tr><td class="auto-style17">', "#", $Format_text_13);
 		$Format_text_15 = str_replace('</td></tr> </table>', "", $Format_text_14);
 		$Format_text_16 = str_replace(' Hours', "", $Format_text_15);
-		return $Format_text_16;
+		$Format_text_17 = str_replace(' </td> </tr> </table>', "", $Format_text_16);
+		$Format_text_18 = str_replace('s1-', "1-", $Format_text_17);
+		return $Format_text_18;
 	}
 
 	function do_makerank($database,$type,$Format_text_16){ 
