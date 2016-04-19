@@ -51,8 +51,6 @@
 		</table><br><br>
 		<div class="<?php if($divi == 0){echo "font2";}else{echo "font22";}?>">
 			Pro-Ranking on <a href="https://github.com/XTWebdesign/PRORanking" target="__blank">GitHub</a><br>
-			Hosted by:<br>
-			<a href="http://hostdix.com.br" target="__blank"><img src="hosp.gif" alt="" style="border:0px"/></a>
 		</div><br>
 	</body>
 </html>
